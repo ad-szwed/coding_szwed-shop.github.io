@@ -1,0 +1,173 @@
+body {
+background: linear-gradient(0deg, rgba(24, 111, 241, 1) 0%, rgba(176, 202, 241, 1) 100%);
+font-family: 'Carrois Gothic SC', sans-serif;
+font-weight: 400;
+font-size: 16px;
+line-height: 1.3;
+background-repeat: no-repeat;
+background-attachment: fixed;
+}
+:root {
+  --button-color: #53366b;
+  --button-color2: #442b58;
+  --button-shadow:  #45345370;
+  --background-color: linear-gradient(0deg, rgba(24, 111, 241, 1) 0%, rgba(176, 202, 241, 1) 100%);
+  --active-lime: greenyellow;
+  --humble-bundle:  rgb(195, 42, 34);
+  --h-weight: 700;
+  --txt-white: whitesmoke;
+  --anchor-navy: rgb(20, 40, 62);
+  --anchor-gray: rgb(182, 182, 182);
+}
+
+a {
+  color: var(--anchor-navy);
+  letter-spacing: 0.10em;
+  text-decoration: none;
+  position: relative;
+}
+
+a:active {
+color: greenyellow
+}
+.page-header {
+display: flex;
+width: 100%;
+padding: 20px;
+}
+.page-header__item {
+flex: 0 1 0px;
+width: 500px;
+height: 100px;  
+}
+.page-header__item:last-child {
+flex-grow: 1;
+text-align: right;
+}
+.navigation-list, .about-likes {
+list-style-type: none;
+}
+.navigation-list li {
+display: inline-block;
+margin-left: 15px
+}
+.navigation-list li a:after {
+  display: inline-block;
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #000;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+  }
+  .navigation-list li a:hover:after {
+    width: 100%; 
+    left: 0; 
+  }
+.page-header__item {
+  text-decoration: none;
+}
+.page-footer {
+    display: flex;
+    border: 10px solid greenyellow;
+}
+.page-footer__item {
+    justify-items: center;
+    border: 1px solid;
+}
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+.box {
+    color: white;
+    font-size: 100px;
+    text-shadow: 4px 4px 0 black;
+    text-align: center;
+    padding: 10px;
+}
+
+.box1 {background: red;}
+.box2 {background: orangered}
+.box3 {background: orange}
+.box4 {background: yellow}
+.box5 {background: yellowgreen}
+.box6 {background: green}
+.box7 {background: blue}
+.box8 {background: blueviolet}
+.box9 {background: purple}
+.box10 {background: rgb(214, 7, 169)}
+
+.container {
+    display: flex;
+    border: 10px solid goldenrod;
+    align-items: center;
+    height:20vh
+}
+
+.boxdown {
+    padding-top:200px;
+}
+
+.button {
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+  }
+  
+  .button:hover {background-color: #3e8e41}
+  
+  .button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+
+  .geeks { 
+    width: 400px; 
+    height: 2px; 
+    background: #fff; 
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+} 
+
+.geeks::before { 
+    content: ""; 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    background: green; 
+    animation: animate 5s linear infinite; 
+} 
+
+@keyframes animate { 
+    0% { 
+        left: 0; 
+    } 
+
+    50% { 
+        left: 100%; 
+    } 
+
+    0% { 
+        left: 0; 
+    } 
+} 
