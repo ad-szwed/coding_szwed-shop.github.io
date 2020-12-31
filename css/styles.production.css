@@ -85,6 +85,7 @@ a:active {
   text-decoration: none;
   border: none;
   border-radius: 3px;
+  outline: none;
 
   /* border-bottom: 3px solid rgba(30, 8, 34, 0.966);
   border-right: 2px solid rgba(30, 8, 34, 0.966); */
