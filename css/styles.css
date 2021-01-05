@@ -1,3 +1,4 @@
+/* ===== GENERAL RULES */
 :root {
   --button-color: #53366b;
   --button-color2: #442b58;
@@ -11,9 +12,9 @@
   --anchor-gray: rgb(182, 182, 182);
 }
 
-/* best practice: */
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 *,
@@ -47,6 +48,8 @@ h3 {
   font-size: 18px;
   font-weight: var(--h-weight);
 }
+
+/* ===== ANCHOR BEHAVIOUR */
 
 /* a: order: link->visited->hover->active */
 a {
@@ -152,8 +155,7 @@ textarea {
   text-align: right;
 }
 
-.navigation-list,
-.about-likes {
+.navigation-list {
   list-style-type: none;
 }
 
@@ -292,6 +294,7 @@ textarea {
   grid-template-rows: 300px 300px;
   grid-gap: 20px;
   text-align: center;
+  overflow: hidden;
 }
 
 .grid__item {
@@ -300,20 +303,22 @@ textarea {
   padding: 10px;
   border: solid black 1px;
   border-radius: 5%;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
 }
 
 .grid-anchor {
   color: var(--anchor-gray);
 }
 
-.container {
-  display: flex;
-  border: 10px solid goldenrod;
-  height: 50vh;
-}
-
 /* responsive classes are put at the very end of a CSS file */
 @media all and (max-width: 500px) { /* other @media screen, print, speech */
+  .page-body {
+    margin: 0 10%;
+  }
+
   .grid {
     grid-template-columns: 1fr;
     grid-gap: 10px;
