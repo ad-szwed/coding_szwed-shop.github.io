@@ -150,6 +150,9 @@ textarea {
   height: 100px;
 }
 
+.page-header__item img {
+  max-width: 100%;
+}
 .page-header__item:last-child {
   flex-grow: 1;
   text-align: right;
