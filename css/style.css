@@ -97,9 +97,22 @@ textarea {
 .index-work {
   height: 25%;
   margin: 5px;
-  max-width: 100%;
+  max-width: 100vh;
   text-align: center;
-  padding: 30% 0
+  padding: 30% 0;
+  opacity: 1;
+  transition: 0.4s background-color;
+  transition: 0.2s transform;
+}
+
+
+.index-about:hover,
+.index-contact:hover,
+.index-mission:hover,
+.index-work:hover {
+  background-color: rgba(0, 0, 0, 0.158);;
+  cursor: pointer;
+  transform: scale(1.1);
 }
 
 #contact-message {
