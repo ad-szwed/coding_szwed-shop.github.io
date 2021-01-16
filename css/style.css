@@ -73,6 +73,35 @@ textarea {
   width: 100%;
 }
 
+.index-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 50%;
+  max-height: 700px;
+  margin: 5% auto;
+  /* border: 3px solid #73AD21; */
+}
+
+.dark-glass {
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 5px 15px 30px -10px rgb(0, 0, 0);
+  width: 100%;
+  border-radius: 10px;
+}
+
+.index-about,
+.index-contact,
+.index-mission,
+.index-work {
+  height: 25%;
+  margin: 5px;
+  max-width: 100%;
+  text-align: center;
+  padding: 30% 0
+}
+
 #contact-message {
   background-color: var(--txt-white);
   padding: 20px;
@@ -97,24 +126,7 @@ textarea {
 
 /* responsive classes are put at the very end of a CSS file */
 @media all and (max-width: 500px) { /* other @media screen, print, speech */
-  .page-body {
-    margin: 0 10%;
-  }
-
-  .grid {
-    grid-template-columns: 1fr;
-    grid-gap: 10px;
-  }
-
-  .grid__item:last-child {
-    grid-column: auto / auto;
-    grid-row: auto / auto;
-  }
-
-  h1 {
-    font-size: 20px;
-  }
-}
+  
 
 @media all and (min-width: 500px) and (max-width: 750px) {
   .grid {
