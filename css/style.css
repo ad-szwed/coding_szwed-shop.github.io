@@ -11,6 +11,14 @@
 
 html {
   box-sizing: border-box;
+  background: url("/img/pic.jpg");
+  background-size: cover;
+  height: 100%;
+  overflow: hidden;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 *,
@@ -20,7 +28,6 @@ html {
 }
 
 body {
-  background-image: url("/img/pic.jpg");
   font-family: 'Carrois Gothic SC', sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -73,13 +80,19 @@ textarea {
   width: 100%;
 }
 
+.uber-container {
+  display: flex;
+  border: 3px solid goldenrod;
+  justify-content: center;
+  height: 100vh;
+}
+
 .index-container {
   display: flex;
   flex-direction: column;
-  max-width: 50%;
-  max-height: 700px;
-  margin: 5% auto;
-  /* border: 3px solid #73AD21; */
+  margin: 10% 0;
+  width: 40%;
+  border: 3px solid #73ad21;
 }
 
 .dark-glass {
@@ -87,7 +100,6 @@ textarea {
   backdrop-filter: blur(10px);
   border: 2px solid rgba(255, 255, 255, 0.2);
   box-shadow: 5px 15px 30px -10px rgb(0, 0, 0);
-  width: 100%;
   border-radius: 10px;
 }
 
@@ -95,16 +107,14 @@ textarea {
 .index-contact,
 .index-mission,
 .index-work {
-  height: 25%;
-  margin: 5px;
-  max-width: 100vh;
-  text-align: center;
-  padding: 30% 0;
+  display: flex;
+  margin-bottom: 10px;
+  align-items: center;
+  justify-content: center;
   opacity: 1;
-  transition: 0.4s background-color;
+  flex: 1;
   transition: 0.2s transform;
 }
-
 
 .index-about:hover,
 .index-contact:hover,
@@ -138,8 +148,24 @@ textarea {
 }
 
 /* responsive classes are put at the very end of a CSS file */
-@media all and (max-width: 500px) { /* other @media screen, print, speech */
-  
+@media all and (min-width: 750px) { /* other @media screen, print, speech */
+  .index-container {
+    flex-wrap: wrap;
+    border: 3px solid red;
+    height: 50%;
+    width: 50%;
+  }
+
+  .index-about,
+  .index-contact,
+  .index-mission,
+  .index-work {
+
+  }
+}
+@media all and (min-width: 1150px){
+
+}
 
 @media all and (min-width: 500px) and (max-width: 750px) {
   .grid {
