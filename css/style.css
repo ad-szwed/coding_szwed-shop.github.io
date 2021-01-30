@@ -34,7 +34,7 @@ body {
   line-height: 1.3;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  color: var(--txt-white)
+  color: var(--txt-white);
 }
 
 h1 {
@@ -70,7 +70,6 @@ a:focus {
 }
 
 a:active {
-  /* moment of clicking */
   color: var(--active-lime);
 }
 
@@ -78,6 +77,13 @@ input,
 textarea {
   font-family: 'Carrois Gothic SC';
   width: 100%;
+}
+
+button {
+  border: none;
+  outline: 0;
+  padding: 0;
+  color: var(--txt-white);
 }
 
 .uber-container {
@@ -101,10 +107,7 @@ textarea {
   border-radius: 10px;
 }
 
-.index-about,
-.index-contact,
-.index-mission,
-.index-work {
+.menu {
   display: flex;
   margin-bottom: 10px;
   align-items: center;
@@ -114,25 +117,24 @@ textarea {
   transition: 0.2s transform;
 }
 
-.index-about:hover,
-.index-contact:hover,
-.index-mission:hover,
-.index-work:hover {
+.menu:hover {
   background-color: rgba(0, 0, 0, 0.158);
   cursor: pointer;
   transform: scale(1.1);
 }
 
-.index-about:active,
-.index-contact:active,
-.index-mission:active,
-.index-work:active {
+.menu:active {
   background-color: rgba(146, 90, 250, 0.322);
 }
 
 #contact-message {
   background-color: var(--txt-white);
   padding: 20px;
+}
+
+.menu.big {
+  transform: scale(2.2);
+  z-index: 999;
 }
 
 .grid__item {
@@ -158,19 +160,17 @@ textarea {
     display: grid;
     grid-template-columns: 1fr 1fr; /* fr as in 'fraction' */
     grid-template-rows: 1fr 1fr;
-    grid-gap: 15px;
-    width: 40vh;
-    height: 40vh;
+    grid-gap: 12px;
+    width: 50vh;
+    height: 50vh;
     text-align: center;
-    /* border: 3px solid red; */
+    justify-items: stretch;
+    align-items: stretch;
+    
   }
 
-  .index-about,
-  .index-contact,
-  .index-mission,
-  .index-work {
-    width: 20vh;
-    height: 20vh;
+  .menu {
+    margin-bottom: 0;
   }
 }
 
@@ -179,17 +179,15 @@ textarea {
     display: grid;
     grid-template-columns: 1fr 1fr; /* fr as in 'fraction' */
     grid-template-rows: 1fr 1fr;
-    grid-gap: 5px;
+    grid-gap: 20px;
     width: 70vh;
     height: 70vh;
     text-align: center;
+    justify-items: stretch;
+    align-items: stretch;
   }
 
-  .index-about,
-  .index-contact,
-  .index-mission,
-  .index-work {
-    width: 30vh;
-    height: 30vh;
+  .menu {
+    margin-bottom: 0;
   }
 }
