@@ -94,9 +94,11 @@ button {
 
 .index-container {
   display: flex;
+  position: absolute;
   flex-direction: column;
   margin: 10% 0;
   width: 40%;
+  height: 80%;
 }
 
 .dark-glass {
@@ -114,7 +116,7 @@ button {
   justify-content: center;
   opacity: 1;
   flex: 1;
-  transition: 0.2s transform;
+  transition-duration: 200ms;
 }
 
 .menu:hover {
@@ -133,12 +135,15 @@ button {
 }
 
 .menu.big {
-  transform: scale(2.2);
+  position: absolute;
   z-index: 999;
+  transform: height(100%) width(100%);
+  width: 110%;
+  height: 110%;
+  scale: 1.1;
 }
 
-.grid__item {
-  background-color: var(--button-color);
+/* .grid__item {
   color: var(--txt-white);
   padding: 10px;
   border: solid black 1px;
@@ -147,7 +152,7 @@ button {
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
-}
+} */
 
 .grid-anchor {
   color: var(--anchor-gray);
@@ -166,7 +171,6 @@ button {
     text-align: center;
     justify-items: stretch;
     align-items: stretch;
-    
   }
 
   .menu {
@@ -185,6 +189,7 @@ button {
     text-align: center;
     justify-items: stretch;
     align-items: stretch;
+    margin-top: 5%;
   }
 
   .menu {
