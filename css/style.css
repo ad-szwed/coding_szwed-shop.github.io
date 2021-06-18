@@ -70,12 +70,6 @@ a:active {
   color: var(--active-lime);
 }
 
-input,
-textarea {
-  font-family: 'Carrois Gothic SC';
-  width: 100%;
-}
-
 /* ========  END GENERAL RULES ======== */
 
 /* ========  USER INTERFACE / MAIN VIEW ======== */
@@ -98,7 +92,7 @@ textarea {
 
 .menu-item {
   border: 1px solid magenta;
-  width: 25%;
+  width: 35vw;
   height: 10vh;
 
   /*  text inside */
