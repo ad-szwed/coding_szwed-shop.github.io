@@ -19,6 +19,7 @@ html {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  user-select: none;
 }
 
 *,
@@ -38,7 +39,7 @@ body {
 }
 
 h1 {
-  font-size: 32px;
+  font-size: 40px;
   font-weight: var(--h-weight);
   text-align: center;
 }
@@ -77,9 +78,9 @@ a:active {
 .glass {
   background-color: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(10px);
-  border: 2px solid rgba(255, 255, 255, 0.2);
+  border: 8px solid rgba(174, 101, 235, 0.2);
   box-shadow: 5px 15px 30px -10px rgb(0, 0, 0);
-  border-radius: 10px;
+  border-radius: 35px;
 }
 
 .menu-container {
@@ -91,7 +92,7 @@ a:active {
 }
 
 .menu-item {
-  border: 1px solid magenta;
+  /* border: 1px solid magenta; */
   width: 35vw;
   height: 10vh;
 
@@ -113,6 +114,13 @@ a:active {
 
 .menu-item:active {
   background-color: rgba(146, 90, 250, 0.322);
+  animation: flash linear 75ms 3;
+}
+
+@keyframes flash {
+  0% { opacity: 1; }
+  50% { opacity: 0.25; }
+  100% { opacity: 1; }
 }
 
 /* ======== END USER INTERFACE / MAIN VIEW ======== */
@@ -127,6 +135,7 @@ a:active {
 .menu-item.big {
   position: absolute;
   z-index: 999;
+
   /* transform: height(100%) width(100%); */
   width: 100%;
   height: 100%;
@@ -153,11 +162,12 @@ a:active {
 /* ======== END MODAL ======== */
 
 /* responsive classes are put at the very end of a CSS file */
-/* @media all and (min-width: 750px) { 
+
+/* @media all and (min-width: 750px) {
 
   .index-container {
     display: grid;
-    grid-template-columns: 1fr 1fr; 
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     grid-gap: 12px;
     width: 70vh;
@@ -175,7 +185,7 @@ a:active {
 @media all and (min-width: 1150px) {
   .menu-container {
     display: grid;
-    grid-template-columns: 1fr 1fr; 
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     grid-gap: 20px;
     width: 70vh;
