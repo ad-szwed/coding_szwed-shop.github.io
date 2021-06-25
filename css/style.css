@@ -86,9 +86,9 @@ a:active {
 .menu-container {
   display: grid;
   grid-gap: 3vh;
-  grid-template-rows: 4fr;
+  grid-template-rows: repeat(10, 10vh);
+  grid-template-columns: repeat(10, 10vw);
   align-self: center;
-  margin-top: 25vh;
 }
 
 .menu-item {
@@ -125,24 +125,41 @@ a:active {
 
 /* ======== END USER INTERFACE / MAIN VIEW ======== */
 
-/* ========  MODAL ======== */
-
-#contact-message {
-  background-color: var(--txt-white);
-  padding: 20px;
+/* ======== UI ELEMENTS POSITIONS ======== */
+#about {
+  grid-row: 3 / 4;
+  grid-column: 4 / 7;
 }
 
+#work {
+  grid-row: 4 / 5;
+  grid-column: 4 / 7;
+}
+
+#mission {
+  grid-row: 5 / 6;
+  grid-column: 4 / 7;
+}
+
+#contact {
+  grid-row: 6 / 7;
+  grid-column: 4 / 7;
+}
+
+/* ======== END UI ELEMENTS POSITIONS ======== */
+
+/* ========  MODAL ======== */
+
 .modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 999; /* Sit on top */
-  border: 2px solid greenyellow;
-  left: 0;
-  top: 0;
-  margin: 100px 100px;
-  width: 500px; /* Full width */
-  height: 500px; /* Full height */
   overflow: scroll;
+  display: flex;
+  grid-row: 2 / 8;
+  grid-column: 3 / 8;
+}
+
+/* Hide scrollbar in modal */
+.modal::-webkit-scrollbar {
+  display: none;
 }
 
 .modal-content {
