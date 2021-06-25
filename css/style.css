@@ -167,6 +167,10 @@ a:active {
   width: 80%; /* Could be more or less, depending on screen size */
 }
 
+.show {
+  display: flex;
+}
+
 /* ======== END MODAL ======== */
 
 /* responsive classes are put at the very end of a CSS file */
