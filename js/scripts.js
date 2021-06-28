@@ -3,14 +3,11 @@ let modal = document.querySelector('.modal'),
   menuItem = document.querySelectorAll('.menu-item');
 
 function modalToggle() {
-  console.log(isModalOpen, "!!is modal open");
   if (!isModalOpen) {
     modal.classList.add('show');
-    console.log('modal shown');
     isModalOpen = !isModalOpen;
   } else {
     modal.classList.remove('show');
-    console.log('modal hidden');
     isModalOpen = !isModalOpen;
   }
 }

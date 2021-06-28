@@ -125,7 +125,7 @@ a:active {
 
 /* ======== END USER INTERFACE / MAIN VIEW ======== */
 
-/* ======== UI ELEMENTS POSITIONS ======== */
+/* ======== UI ELEMENTS POSITIONS ON GRID======== */
 #about {
   grid-row: 3 / 4;
   grid-column: 4 / 7;
@@ -146,7 +146,7 @@ a:active {
   grid-column: 4 / 7;
 }
 
-/* ======== END UI ELEMENTS POSITIONS ======== */
+/* ======== END UI ELEMENTS POSITIONS ON GRID ======== */
 
 /* ========  MODAL ======== */
 
