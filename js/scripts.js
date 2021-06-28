@@ -4,7 +4,8 @@ let modal = document.querySelector('.modal'),
   about = document.querySelector('#about'),
   work = document.querySelector('#work'),
   mission = document.querySelector('#mission'),
-  contact = document.querySelector('#contact');
+  contact = document.querySelector('#contact'),
+
 
 // toggle logic
 function modalToggle() {
@@ -23,17 +24,13 @@ menuItem.forEach((elem) => {
     e.stopPropagation();
     modalToggle();
     if (elem == about) {
-      console.log("contains about!", elem);
-      modal.innerHTML = ('no way, it works for about!')
+      modal.innerHTML = aboutContent;
     } else if (elem == work) {
-      console.log("contains work!", elem);
-      modal.innerHTML = ('no way, it works for work!')
+      modal.innerHTML = workContent
     } else if (elem == mission) {
-      console.log("contains mission!", elem);
-      modal.innerHTML = ('no way, it works for mission!')
+      modal.innerHTML = missionContent
     } else if (elem == contact) {
-      console.log("contains contact!", elem);
-      modal.innerHTML = ('no way, it works for contact!')
+      modal.innerHTML = contactContent
     }
   });
 })
