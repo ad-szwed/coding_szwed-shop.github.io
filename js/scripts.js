@@ -53,7 +53,14 @@ document.addEventListener('keydown', (event => {
 
 // ===================================*  ACTUAL CONTENT FOR MODALS  *========================================
 
-aboutContent = 'this is about content';
+// ABOUT
+aboutContent = '<h2> ABOUT ME</h2>' + 'this is about content';
+
+// WORK
 workContent = 'this is work content';
+
+// MISSION
 missionContent = 'this is mission content';
+
+// CONTACT
 contactContent = 'this is contact content';
