@@ -5,6 +5,7 @@ let modal = document.querySelector('.modal'),
   work = document.querySelector('#work'),
   mission = document.querySelector('#mission'),
   contact = document.querySelector('#contact'),
+  aboutContent, workContent, missionContent, contactContent;
 
 
 // toggle logic
@@ -49,3 +50,10 @@ document.addEventListener('keydown', (event => {
     isModalOpen = !isModalOpen;
   }
 }))
+
+// ===================================*  ACTUAL CONTENT FOR MODALS  *========================================
+
+aboutContent = 'this is about content';
+workContent = 'this is work content';
+missionContent = 'this is mission content';
+contactContent = 'this is contact content';
