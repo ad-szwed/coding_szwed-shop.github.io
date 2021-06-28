@@ -2,6 +2,7 @@ let modal = document.querySelector('.modal'),
   isModalOpen = false,
   menuItem = document.querySelectorAll('.menu-item');
 
+// toggle logic
 function modalToggle() {
   if (!isModalOpen) {
     modal.classList.add('show');
@@ -12,11 +13,10 @@ function modalToggle() {
   }
 }
 
-// open modal when clicking on UI element
+// modal show rules and content
 menuItem.forEach((elem) => {
   elem.addEventListener('click', (e) => {
     e.stopPropagation();
-    console.log(e.target);
     modalToggle();
   });
 })
