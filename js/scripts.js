@@ -1,20 +1,43 @@
 let modal = document.querySelector('.modal'),
+  modalTitle = document.querySelector('.modal h1'),
+  modalBody = document.querySelector('.modal p'),
   isModalOpen = false,
-  menuItem = document.querySelectorAll('.menu-item'),
-  about = document.querySelector('#about'),
-  work = document.querySelector('#work'),
-  mission = document.querySelector('#mission'),
-  contact = document.querySelector('#contact'),
-  aboutContent, workContent, missionContent, contactContent;
+  background = document.querySelector('.menu-container'),
+  // menu items: 
+  menuItem = document.querySelectorAll('.menu-item');
+
+// DATA STRUCTURE
+let modalContent = {
+  'about': {
+    'title': 'about me',
+    'content': 'ABOUTLorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem suscipit officia excepturi aut labore maxime voluptatibus, eum aspernatur cupiditate nesciunt debitis earum dolore corrupti iste itaque obcaecati optio quidem dolor laboriosam minima veniam voluptate animi perspiciatis. Facilis eveniet mollitia ipsum corrupti officiis explicabo sapiente porro perferendis ad molestiae distinctio ipsa temporibus numquam deserunt quia est sed eius optio, iusto ex dolorum? Dolores rem voluptatum qui aut quaerat ipsam provident eveniet corrupti eos vel minima beatae, molestiae, necessitatibus nobis officiis error modi praesentium repellat quibusdam sed, cupiditate corporis aperiam. Rerum quos maiores quis, iusto fugiat amet odio eius dolor ullam. Asperiores.'
+  },
+  'work': {
+    'title': 'My Work',
+    'content': 'WORKLorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem suscipit officia excepturi aut labore maxime voluptatibus, eum aspernatur cupiditate nesciunt debitis earum dolore corrupti iste itaque obcaecati optio quidem dolor laboriosam minima veniam voluptate animi perspiciatis. Facilis eveniet mollitia ipsum corrupti officiis explicabo sapiente porro perferendis ad molestiae distinctio ipsa temporibus numquam deserunt quia est sed eius optio, iusto ex dolorum? Dolores rem voluptatum qui aut quaerat ipsam provident eveniet corrupti eos vel minima beatae, molestiae, necessitatibus nobis officiis error modi praesentium repellat quibusdam sed, cupiditate corporis aperiam. Rerum quos maiores quis, iusto fugiat amet odio eius dolor ullam. Asperiores.'
+  },
+  'contact': {
+    'title': 'Contact me',
+    'content': 'CONTACTLorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem suscipit officia excepturi aut labore maxime voluptatibus, eum aspernatur cupiditate nesciunt debitis earum dolore corrupti iste itaque obcaecati optio quidem dolor laboriosam minima veniam voluptate animi perspiciatis. Facilis eveniet mollitia ipsum corrupti officiis explicabo sapiente porro perferendis ad molestiae distinctio ipsa temporibus numquam deserunt quia est sed eius optio, iusto ex dolorum? Dolores rem voluptatum qui aut quaerat ipsam provident eveniet corrupti eos vel minima beatae, molestiae, necessitatibus nobis officiis error modi praesentium repellat quibusdam sed, cupiditate corporis aperiam. Rerum quos maiores quis, iusto fugiat amet odio eius dolor ullam. Asperiores.'
+  },
+  'mission': {
+    'title': 'My Mission',
+    'content': 'MISSIONLorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem suscipit officia excepturi aut labore maxime voluptatibus, eum aspernatur cupiditate nesciunt debitis earum dolore corrupti iste itaque obcaecati optio quidem dolor laboriosam minima veniam voluptate animi perspiciatis. Facilis eveniet mollitia ipsum corrupti officiis explicabo sapiente porro perferendis ad molestiae distinctio ipsa temporibus numquam deserunt quia est sed eius optio, iusto ex dolorum? Dolores rem voluptatum qui aut quaerat ipsam provident eveniet corrupti eos vel minima beatae, molestiae, necessitatibus nobis officiis error modi praesentium repellat quibusdam sed, cupiditate corporis aperiam. Rerum quos maiores quis, iusto fugiat amet odio eius dolor ullam. Asperiores.'
+  }
+}
 
 
-// toggle logic
+
+// toggle modal logic
 function modalToggle() {
   if (!isModalOpen) {
     modal.classList.add('show');
+    console.log(background.classList)
+    background.classList.add('dim');
     isModalOpen = !isModalOpen;
   } else {
     modal.classList.remove('show');
+    background.classList.remove('dim')
     isModalOpen = !isModalOpen;
   }
 }
@@ -24,15 +47,14 @@ menuItem.forEach((elem) => {
   elem.addEventListener('click', (e) => {
     e.stopPropagation();
     modalToggle();
-    if (elem == about) {
-      modal.innerHTML = aboutContent;
-    } else if (elem == work) {
-      modal.innerHTML = workContent
-    } else if (elem == mission) {
-      modal.innerHTML = missionContent
-    } else if (elem == contact) {
-      modal.innerHTML = contactContent
-    }
+    console.log(elem, '!!elem');
+    let target = e.target.getAttribute('id');
+    console.log(target, '!!target');
+    console.log(modalContent[target]);
+    modalTitle.innerHTML = modalContent[target].title;
+    modalBody.innerHTML = modalContent[target].content;
+
+
   });
 })
 
@@ -54,13 +76,3 @@ document.addEventListener('keydown', (event => {
 // ===================================*  ACTUAL CONTENT FOR MODALS  *========================================
 
 // ABOUT
-aboutContent = '<h2> ABOUT ME</h2>' + 'this is about content';
-
-// WORK
-workContent = 'this is work content';
-
-// MISSION
-missionContent = 'this is mission content';
-
-// CONTACT
-contactContent = 'this is contact content';
