@@ -366,7 +366,7 @@ textarea {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 20px 1fr 20px 1fr;
-  grid-template-columns: 1fr 1fr 1fr; /* fr as in 'fraction' */
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr; /* fr as in 'fraction' */
   -ms-grid-rows: 300px 20px 300px;
   grid-template-rows: 300px 300px;
   grid-gap: 20px;
@@ -409,6 +409,13 @@ textarea {
   padding: 10px;
   border: solid black 1px;
   border-radius: 5%;
+  overflow-y: scroll;
+  -ms-overflow-style: none; /* Edge, Internet Explorer */
+  scrollbar-width: none; /* Firefox */
+}
+
+img.work-img {
+  width: 90%;
 }
 
 .grid-anchor {
