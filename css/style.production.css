@@ -172,6 +172,11 @@ h4 > a:hover::before {
   right: 0;
 }
 
+.cv-button{
+  display: flex;
+  justify-content: center;
+}
+
 input,
 textarea {
   font-family: 'Carrois Gothic SC';
