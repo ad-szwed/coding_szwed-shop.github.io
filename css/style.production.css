@@ -377,12 +377,12 @@ textarea {
   color: var(--anchor-gray);
 }
 
-.container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  border: 10px solid goldenrod;
-  height: 50vh;
+.modal {
+  display: hidden;
+}
+
+.dim {
+  background-color: #000;
 }
 
 /* responsive classes are put at the very end of a CSS file */
