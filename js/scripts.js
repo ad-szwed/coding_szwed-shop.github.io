@@ -4,7 +4,9 @@ let modal = document.querySelector('.modal'),
   isModalOpen = false,
   background = document.querySelector('.menu-container'),
   // menu items: 
-  menuItem = document.querySelectorAll('.menu-item');
+  menuItem = document.querySelectorAll('.menu-item'),
+  hoverAudio = new Audio("./audio/hover.mp3"),
+  modalAudio = new Audio("audio/modalOpen.wav");
 
 // DATA STRUCTURE
 let modalContent = {
@@ -26,13 +28,11 @@ let modalContent = {
   }
 }
 
-
-
 // toggle modal logic
 function modalToggle() {
   if (!isModalOpen) {
     modal.classList.add('show');
-    console.log(background.classList)
+    // console.log(background.classList)
     background.classList.add('dim');
     isModalOpen = !isModalOpen;
   } else {
@@ -44,17 +44,21 @@ function modalToggle() {
 
 // modal show rules and content
 menuItem.forEach((elem) => {
+  // on hover
+  elem.addEventListener('mouseenter', function () {
+    // cloneNode(true) before .play() makes it possible to play it multiple times at once!
+    hoverAudio.cloneNode(true).play();
+  })
+  // on click
   elem.addEventListener('click', (e) => {
     e.stopPropagation();
     modalToggle();
     console.log(elem, '!!elem');
     let target = e.target.getAttribute('id');
     console.log(target, '!!target');
-    console.log(modalContent[target]);
     modalTitle.innerHTML = modalContent[target].title;
     modalBody.innerHTML = modalContent[target].content;
-
-
+    modalAudio.cloneNode(true).play();
   });
 })
 
@@ -72,6 +76,9 @@ document.addEventListener('keydown', (event => {
     isModalOpen = !isModalOpen;
   }
 }))
+
+// play sound on hover
+
 
 // ===================================*  ACTUAL CONTENT FOR MODALS  *========================================
 

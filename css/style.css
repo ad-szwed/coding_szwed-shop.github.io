@@ -155,20 +155,31 @@ a:active {
   display: none;
   grid-row: 2 / 8;
   grid-column: 3 / 8;
+  flex-direction: column;
 }
+
+#image {
+  display: none;
+}
+
+/* .modal h1 {
+}
+
+.modal p {
+  
+} */
 
 /* Hide scrollbar in modal */
 .modal::-webkit-scrollbar {
   display: none;
 }
 
-.modal-content {
-  margin: 5% auto; /* 15% from the top and centered */
-  width: 80%; /* Could be more or less, depending on screen size */
-}
-
 .show {
   display: flex;
+}
+
+.dim {
+  background-color: #22112f7a;
 }
 
 /* ======== END MODAL ======== */
