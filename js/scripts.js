@@ -55,12 +55,13 @@ function modalToggle() {
 
 // modal show rules and content
 menuItem.forEach((elem) => {
-  // on hover
+
+  // sounds on hover
   elem.addEventListener('mouseenter', function () {
-    // cloneNode(true) before .play() makes it possible to play it multiple times at once!
-    hoverAudio.cloneNode(true).play();
+    hoverAudio.cloneNode(true).play(); // cloneNode(true) before .play() makes it possible to play it multiple times at once!
   })
-  // on click
+
+  // content on click
   elem.addEventListener('click', (e) => {
     e.stopPropagation();
     modalToggle();
