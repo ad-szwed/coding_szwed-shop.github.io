@@ -44,9 +44,7 @@ function tone(sound, toggle) {
 function modalToggle() {
   if (!isModalOpen) {
     modal.classList.add('show');
-    // console.log(background.classList)
     background.classList.add('dim');
-    body.style.background = 'url("/img/pic.jpg")';
     isModalOpen = !isModalOpen;
   } else {
     modal.classList.remove('show');
@@ -66,9 +64,7 @@ menuItem.forEach((elem) => {
   elem.addEventListener('click', (e) => {
     e.stopPropagation();
     modalToggle();
-    console.log(elem, '!!elem');
     let target = e.target.getAttribute('id');
-    console.log(target, '!!target');
     modalTitle.innerHTML = modalContent[target].title;
     modalBody.innerHTML = modalContent[target].content;
     tone(soundOpen, true)
