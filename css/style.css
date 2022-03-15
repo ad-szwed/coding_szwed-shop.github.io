@@ -68,10 +68,6 @@ a:focus {
   text-decoration: none;
 }
 
-/* ========  END GENERAL RULES ======== */
-
-/* ========  USER INTERFACE / MAIN VIEW ======== */
-
 .glass {
   background-color: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(10px);
@@ -80,12 +76,16 @@ a:focus {
   border-radius: 35px;
 }
 
+/* ========  END GENERAL RULES ======== */
+
+/* ========  USER INTERFACE / MAIN VIEW ======== */
+
 .menu-container {
   display: grid;
   grid-gap: 3vh;
   grid-template-rows: repeat(10, 10vh);
   grid-template-columns: repeat(10, 10vw);
-  align-self: center;
+  justify-content: center;
 }
 
 .menu-item {
