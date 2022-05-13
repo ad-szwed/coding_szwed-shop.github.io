@@ -27,7 +27,12 @@ let modalContent = {
   'mission': {
     'title': 'My Mission',
     'content': 'MISSIONLorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem suscipit officia excepturi aut labore maxime voluptatibus, eum aspernatur cupiditate nesciunt debitis earum dolore corrupti iste itaque obcaecati optio quidem dolor laboriosam minima veniam voluptate animi perspiciatis. Facilis eveniet mollitia ipsum corrupti officiis explicabo sapiente porro perferendis ad molestiae distinctio ipsa temporibus numquam deserunt quia est sed eius optio, iusto ex dolorum? Dolores rem voluptatum qui aut quaerat ipsam provident eveniet corrupti eos vel minima beatae, molestiae, necessitatibus nobis officiis error modi praesentium repellat quibusdam sed, cupiditate corporis aperiam. Rerum quos maiores quis, iusto fugiat amet odio eius dolor ullam. Asperiores.'
+  },
+  'warning': {
+    'title': 'sound warning',
+    'content': 'this site has some amazing sound effects. If, for some wild reason, you wish to deprive yourself of those sounds, click the icon in the upper-right corner.'
   }
+
 }
 
 // sounds rules
@@ -45,12 +50,11 @@ function modalToggle() {
   if (!isModalOpen) {
     modal.classList.add('show');
     background.classList.add('dim');
-    isModalOpen = !isModalOpen;
   } else {
     modal.classList.remove('show');
     background.classList.remove('dim')
-    isModalOpen = !isModalOpen;
   }
+  isModalOpen = !isModalOpen;
 }
 
 // modal show rules and content
@@ -65,7 +69,7 @@ menuItem.forEach((elem) => {
   elem.addEventListener('click', (e) => {
     e.stopPropagation();
     modalToggle();
-    let target = e.target.getAttribute('id');
+    let target = e.currentTarget.getAttribute('id');
     modalTitle.innerHTML = modalContent[target].title;
     modalBody.innerHTML = modalContent[target].content;
     tone(soundOpen, true)
@@ -87,7 +91,3 @@ document.addEventListener('keydown', (event => {
     isModalOpen = !isModalOpen;
   }
 }))
-
-// ===================================*  ACTUAL CONTENT FOR MODALS  *========================================
-
-// ABOUT
