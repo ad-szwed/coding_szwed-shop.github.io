@@ -69,7 +69,7 @@ menuItem.forEach((elem) => {
   elem.addEventListener('click', (e) => {
     e.stopPropagation();
     modalToggle();
-    let target = e.currentTarget.getAttribute('id');
+    let target = e.currentTarget.getAttribute('id'); //https://discuss.hotwired.dev/t/cannot-get-attribute-value-using-event-target/134 - solution for e.currentTarget
     modalTitle.innerHTML = modalContent[target].title;
     modalBody.innerHTML = modalContent[target].content;
     tone(soundOpen, true)
