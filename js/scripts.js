@@ -12,7 +12,7 @@ let modal = document.querySelector('.modal'),
 
 // DATA STRUCTURE
 let modalContent = {
-  'about': {
+  'my team': {
     'title': 'about me',
     'content': "My name is Adam and I have a difficult to prenaunce surname. It suppose to sound like 'shveh-dah', but It's usually prenounced as sweat-ah. I got so used to this misprenaunceation, that I turned it into my pesonal brand - szwed-shop. Coding szwed-shop"
   },
@@ -28,12 +28,11 @@ let modalContent = {
     'title': 'My Mission',
     'content': 'MISSIONLorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem suscipit officia excepturi aut labore maxime voluptatibus, eum aspernatur cupiditate nesciunt debitis earum dolore corrupti iste itaque obcaecati optio quidem dolor laboriosam minima veniam voluptate animi perspiciatis. Facilis eveniet mollitia ipsum corrupti officiis explicabo sapiente porro perferendis ad molestiae distinctio ipsa temporibus numquam deserunt quia est sed eius optio, iusto ex dolorum? Dolores rem voluptatum qui aut quaerat ipsam provident eveniet corrupti eos vel minima beatae, molestiae, necessitatibus nobis officiis error modi praesentium repellat quibusdam sed, cupiditate corporis aperiam. Rerum quos maiores quis, iusto fugiat amet odio eius dolor ullam. Asperiores.'
   },
-  'warning': {
+  'sound-warning': {
     'title': 'sound warning',
     'content': 'this site has some amazing sound effects. If, for some wild reason, you wish to deprive yourself of those sounds, click the icon in the upper-right corner.'
   }
-
-}
+};
 
 // sounds rules
 function tone(sound, toggle) {
@@ -43,7 +42,7 @@ function tone(sound, toggle) {
   } else {
     sound.play()
   }
-}
+};
 
 // toggle modal logic
 function modalToggle() {
@@ -55,15 +54,14 @@ function modalToggle() {
     background.classList.remove('dim')
   }
   isModalOpen = !isModalOpen;
-}
+};
 
 // modal show rules and content
 menuItem.forEach((elem) => {
 
   // sounds on hover
-  elem.addEventListener('mouseenter', function () {
-    hoverAudio.cloneNode(true).play(); // cloneNode(true) before .play() makes it possible to play it multiple times at once!
-  })
+  // cloneNode(true) before .play() makes it possible to play it multiple times at once!
+  elem.addEventListener('mouseenter', () => hoverAudio.cloneNode(true).play())
 
   // content on click
   elem.addEventListener('click', (e) => {
@@ -91,3 +89,6 @@ document.addEventListener('keydown', (event => {
     isModalOpen = !isModalOpen;
   }
 }))
+
+//animaiton trigger
+document.addEventListener('click', (e) =>)
