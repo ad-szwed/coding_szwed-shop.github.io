@@ -373,7 +373,7 @@ textarea {
   display: grid;
   -ms-grid-columns: 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr; /* fr as in 'fraction' */
-  -ms-grid-rows: 300px 20px 300px;
+  -ms-grid-rows: 600px 20px 600px;
   grid-template-rows: 600px 600px;
   grid-gap: 20px;
   text-align: center;
